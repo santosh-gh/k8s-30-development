@@ -1,0 +1,52 @@
+trigger: none
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  - group: 'k8s-dev'
+  - name: helmRepoName
+    value: 'helm'
+  - name: chartName 
+    value: 'config'
+  - name: helmChartPath 
+    value: './storehelmchart/'
+  - name: helmChartVersion
+    value: $(Build.BuildId)
+
+stages:
+  - stage: HelmPackagePush
+    displayName: Helm Package and Push
+    jobs:
+    - job: Helm
+      pool:
+        vmImage: 'ubuntu-latest'
+      steps:
+        - template: appTemplates/helm-push.yml
+          parameters:
+            imageTag: $(imageTag)
+            helmChartPath: $(helmChartPath)
+            chartName: $(chartName)
+            helmChartVersion: $(helmChartVersion) 
+            helmRepoName: $(helmRepoName)
+            acrName: $(acrName)
+            serviceConnection: $(serviceConnection)
+
+  - stage: Deploy
+    displayName: Deploy to AKS
+    dependsOn: HelmPackagePush
+    jobs:
+    - job: Deploy
+      pool:
+        vmImage: 'ubuntu-latest'
+      steps:
+        - template: appTemplates/deploy.yml
+          parameters:
+            chartName: $(chartName)
+            helmChartVersion: $(helmChartVersion) 
+            helmRepoName: $(helmRepoName)
+            acrName: $(acrName)
+            aksCluster: $(aksCluster)
+            aksResourceGroup: $(aksResourceGroup) 
+            serviceConnection: $(serviceConnection)
+            namespace: $(namespace)
