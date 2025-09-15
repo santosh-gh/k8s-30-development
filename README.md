@@ -331,7 +331,7 @@
   # Store Front Service
   docker build -t store-front ./app/store-front 
   docker tag store-front:latest $ACR_NAME.azurecr.io/store-front:1.0.1
-  docker push $ACR_NAME.azurecr.io/store-front:1.0.1
+  docker push $ACR_NAME.azurecr.io/store-front:1.0.2
 
   docker images
 
@@ -355,6 +355,8 @@
   helm push order-0.1.0.tgz oci://$ACR_NAME.azurecr.io/online-store-charts
   helm push product-0.1.0.tgz oci://$ACR_NAME.azurecr.io/online-store-charts
   helm push store-front-0.1.0.tgz oci://$ACR_NAME.azurecr.io/online-store-charts
+
+  helm push store-front-0.1.1.tgz oci://$ACR_NAME.azurecr.io/online-store-charts
 
   helm pull oci://$ACR_NAME.azurecr.io/helm/config --version 0.1.0
   helm pull oci://$ACR_NAME.azurecr.io/helm/rabbitmq --version 0.1.0
