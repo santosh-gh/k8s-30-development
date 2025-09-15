@@ -1,4 +1,4 @@
-# Part 29: Deploying microservice applications in Kubernetes using Helmchart from HelmRepository (ACR)
+# Part 30: Deploying microservice applications in Kubernetes using Flux CD and Helmchart with Image Automation
 
     Part1:   Manual Deployment (AzCLI + Docker Desktop + kubectl)  
     GitHub:  https://github.com/santosh-gh/k8s-01
@@ -247,12 +247,22 @@
     GitHub:  https://github.com/santosh-gh/k8s-28-deployment.git
     YouTube: https://www.youtube.com/watch?v=WTJvum3IZTU&list=PLr6ErUeFySVug9VG73_W2MypRez_ZycWh&index=28 
 
-     Part29: GitOps using Flux (Microservice + Flux + Helm Chart + HelmRepository(ACR)+ AKS)             
+    Part29: GitOps using Flux (Microservice + Flux + Helm Chart + HelmRepository(ACR)+ AKS)             
             Helm Chart with multiple Microservices
             Helm Charts in HelmRepository (Azure Container Registry)
             OCI
             Private Repository
 
+    GitHub:  https://github.com/santosh-gh/k8s-29-development.git     
+    GitHub:  https://github.com/santosh-gh/k8s-29-deployment.git
+    YouTube: https://www.youtube.com/watch?v=NpS63UEO3Bg&list=PLr6ErUeFySVug9VG73_W2MypRez_ZycWh&index=26 
+
+    Part30: GitOps using Flux (Microservice + Flux CD + Helm Chart + HelmRepository(ACR) + Image Automation + AKS)             
+            Helm Chart with multiple Microservices
+            Helm Charts in HelmRepository (Azure Container Registry)
+            Image Automation
+            OCI
+            Private Repository
     GitHub:  https://github.com/santosh-gh/k8s-29-development.git     
     GitHub:  https://github.com/santosh-gh/k8s-29-deployment.git
     YouTube: https://www.youtube.com/watch?v=NpS63UEO3Bg&list=PLr6ErUeFySVug9VG73_W2MypRez_ZycWh&index=26 
