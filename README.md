@@ -330,8 +330,8 @@
 
   # Store Front Service
   docker build -t store-front ./app/store-front 
-  docker tag store-front:latest $ACR_NAME.azurecr.io/store-front:1.0.0
-  docker push $ACR_NAME.azurecr.io/store-front:1.0.0
+  docker tag store-front:latest $ACR_NAME.azurecr.io/store-front:1.0.1
+  docker push $ACR_NAME.azurecr.io/store-front:1.0.1
 
   docker images
 
