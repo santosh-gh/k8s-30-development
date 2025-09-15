@@ -1,4 +1,4 @@
-# Part 30: Deploying microservice applications in Kubernetes using Flux CD and Helmchart with Image Automation
+# Part 30: Deploying microservice applications in Kubernetes using Helmchart and Flux CD with Image Automation
 
     Part1:   Manual Deployment (AzCLI + Docker Desktop + kubectl)  
     GitHub:  https://github.com/santosh-gh/k8s-01
@@ -255,12 +255,12 @@
 
     GitHub:  https://github.com/santosh-gh/k8s-29-development.git     
     GitHub:  https://github.com/santosh-gh/k8s-29-deployment.git
-    YouTube: https://www.youtube.com/watch?v=NpS63UEO3Bg&list=PLr6ErUeFySVug9VG73_W2MypRez_ZycWh&index=26 
+    YouTube: https://www.youtube.com/watch?v=WcY1XZb4_J8&list=PLr6ErUeFySVug9VG73_W2MypRez_ZycWh&index=29 
 
     Part30: GitOps using Flux (Microservice + Flux CD + Helm Chart + HelmRepository(ACR) + Image Automation + AKS)             
             Helm Chart with multiple Microservices
             Helm Charts in HelmRepository (Azure Container Registry)
-            Image Automation
+            Flux Image Automation
             OCI
             Private Repository
     GitHub:  https://github.com/santosh-gh/k8s-29-development.git     
@@ -340,8 +340,8 @@
 
   # Store Front Service
   docker build -t store-front ./app/store-front 
-  docker tag store-front:latest $ACR_NAME.azurecr.io/store-front:1.0.0
-  docker push $ACR_NAME.azurecr.io/store-front:1.0.0
+  docker tag store-front:latest $ACR_NAME.azurecr.io/store-front:1.0.2
+  docker push $ACR_NAME.azurecr.io/store-front:1.0.2
 
   docker images
 
