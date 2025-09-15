@@ -263,8 +263,8 @@
             Flux Image Automation
             OCI
             Private Repository
-    GitHub:  https://github.com/santosh-gh/k8s-29-development.git     
-    GitHub:  https://github.com/santosh-gh/k8s-29-deployment.git
+    GitHub:  https://github.com/santosh-gh/k8s-30-development.git     
+    GitHub:  https://github.com/santosh-gh/k8s-30-deployment.git
     YouTube: https://www.youtube.com/watch?v=NpS63UEO3Bg&list=PLr6ErUeFySVug9VG73_W2MypRez_ZycWh&index=26 
 
 # Architesture
